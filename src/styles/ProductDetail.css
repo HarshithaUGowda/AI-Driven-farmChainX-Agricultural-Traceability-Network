@@ -1,0 +1,158 @@
+/* ================================
+   Product Detail Page
+================================ */
+.product-detail {
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* elegant aqua-blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================================
+   Product Card
+================================ */
+.product-detail-card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 550px;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-detail-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-detail-card h1 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   Product Image
+================================ */
+.product-image {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ================================
+   Product Info
+================================ */
+.product-info {
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 15px;
+}
+
+.value {
+  color: #4a5568;
+  text-align: right;
+  max-width: 60%;
+  font-size: 15px;
+}
+
+/* ================================
+   Map Link
+================================ */
+.map-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0077b6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.map-link:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
+
+/* ================================
+   Verification Badge
+================================ */
+.verification-badge {
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* ================================
+   Loading & Error States
+================================ */
+.product-detail-loading,
+.product-detail-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* ================================
+   Responsive Design
+================================ */
+@media (max-width: 600px) {
+  .product-detail-card {
+    margin: 15px;
+    padding: 25px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .value {
+    max-width: 100%;
+    text-align: left;
+    margin-top: 5px;
+  }
+}

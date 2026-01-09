@@ -1,0 +1,239 @@
+/* =========================================================
+   1. GLOBAL STYLES & LAYOUT
+   ========================================================= */
+.distributor-dashboard {
+    font-family: 'Inter', sans-serif; 
+    padding: 30px;
+    background: linear-gradient(to right, #e0f2fe, #fef3c7);
+    min-height: 100vh;
+}
+
+h1 {
+    color: #1e3a8a;
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #374151;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #6b7280;
+}
+
+/* --- Header & Logout Button --- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.dashboard-title h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.dashboard-title p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.btn-logout {
+    background: linear-gradient(90deg, #f43f5e, #f97316);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+
+.btn-logout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(244, 63, 94, 0.4);
+}
+
+/* =========================================================
+   2. TABS NAVIGATION
+   ========================================================= */
+.tabs {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #d1d5db;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px; 
+}
+
+.tabs button.active {
+    color: #1e3a8a;
+    border-bottom: 2px solid #1e3a8a;
+    font-weight: 600;
+}
+
+/* =========================================================
+   3. TABLE STYLES (ORDERS & INVENTORY)
+   ========================================================= */
+.table-container {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.orders-table, .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.orders-table th, .inventory-table th {
+    background: linear-gradient(90deg, #e0f2fe, #bae6fd);
+    color: #1e3a8a;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.orders-table td, .inventory-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.orders-table tr:hover, .inventory-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+.orders-table ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.orders-table li {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.no-orders {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   4. STATUS BADGES
+   ========================================================= */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Order Status */
+.pending { background-color: #fef3c7; color: #a16207; }
+.processing { background-color: #bfdbfe; color: #1d4ed8; }
+.shipped { background-color: #d1fae5; color: #047857; }
+.fulfilled { background-color: #c7d2fe; color: #4338ca; }
+
+/* Inventory Status */
+.good { background-color: #d1fae5; color: #047857; }
+.low { background-color: #fee2e2; color: #b91c1c; }
+
+/* =========================================================
+   5. ACTION BUTTONS
+   ========================================================= */
+.btn-action {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-action:hover {
+    background: linear-gradient(90deg, #4338ca, #4f46e5);
+}
+
+/* =========================================================
+   6. ANALYTICS CARDS
+   ========================================================= */
+.analytics-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 6px solid #1e40af;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+/* =========================================================
+   7. RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 768px) {
+    .distributor-dashboard { padding: 15px; }
+    .tabs { flex-wrap: wrap; }
+    .tabs button { flex-grow: 1; margin-bottom: 5px; font-size: 0.9rem; }
+    .dashboard-header { flex-direction: column; align-items: flex-start; }
+    .btn-logout { margin-top: 15px; }
+}
